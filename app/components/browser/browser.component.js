@@ -13,7 +13,6 @@ var BrowserComponent = (function () {
         this.$rootScope.$broadcast('showContent', this.folder.children);
     };
     BrowserComponent.prototype.showContextMenu = function ($event) {
-        console.log($event);
         this.$rootScope.$broadcast('showContextMenu', { event: $event, id: this.folder.id, type: this.folder.children ? 'folder' : 'file' });
     };
     return BrowserComponent;

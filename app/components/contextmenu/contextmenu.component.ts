@@ -15,18 +15,34 @@ class ContextMenuComponent {
         });
     }
 
-    choose (event:any, id:number) {
-        console.log(event, id)
-    }
     hideMe(event: any) {
         if (event.target.classList.contains('context-bg')) {
-            console.log("Hide");
-            this.id = null;
+             this.id = null;
         }
 
     }
 
+    createFolder(event:any, id:number){
+        console.log('i am a create folder function');
+        console.log('item id is : '+ id);
+    }
 
+    createFile(event:any, id:number){
+        console.log('i am a create file function');
+        console.log('item id is : '+ id);
+    }
+    rename(event:any, id:number){
+        console.log('i am a rename item function');
+        console.log('item id is : '+ id);
+    }
+    delete(event:any, id:number){
+        console.log('i am a delete item function');
+        console.log('item id is : '+ id);
+    }
+    open(event:any, id:number){
+        console.log('i am an open file function');
+        console.log('item id is : '+ id);
+    }
 }
 
 AppModule.component('contextMenu', {

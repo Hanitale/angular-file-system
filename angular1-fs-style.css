@@ -51,7 +51,7 @@ div{
     padding:10px;
 }
 
-.context-menu li:hover {
+.cmli:hover {
     background-color: aquamarine;
     cursor: pointer;
 }
@@ -61,4 +61,8 @@ div{
     background-color: black;
     color: lavender;
     cursor: pointer;
+}
+
+.tinyMessage{
+    font-size:8px;
 }

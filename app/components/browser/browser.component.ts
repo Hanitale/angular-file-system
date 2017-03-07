@@ -19,7 +19,6 @@ class BrowserComponent {
     }
 
     showContextMenu($event: any) {
-        console.log($event);
        this.$rootScope.$broadcast('showContextMenu', { event: $event, id: this.folder.id, type: this.folder.children ? 'folder' : 'file' });
     }
 }

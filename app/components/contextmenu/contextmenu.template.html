@@ -1,10 +1,12 @@
 <div ng-if="$ctrl.id" class="context-bg" ng-click="$ctrl.hideMe($event)">
     <div class="context-menu" ng-style="{'top': $ctrl.posY + 'px','left':$ctrl.posX + 'px'}">
-        <ul ng-click="$ctrl.choose($event, $ctrl.id)">
-            <li ng-if="$ctrl.type=='folder'">New Folder</li>
-            <li ng-if="$ctrl.type=='folder'">New File</li>
-            <li ng-if="$ctrl.type!='folder'">This is for files only</li>
-            <li ng-if="$ctrl.type=='folder'">This is for folders only</li>
+        <ul>
+            <li class="cmli" ng-click="$ctrl.createFolder($event, $ctrl.id)" ng-if="$ctrl.type=='folder'">New Folder</li>
+            <li class="cmli" ng-click="$ctrl.createFile($event, $ctrl.id)" ng-if="$ctrl.type=='folder'">New File</li>
+            <li class="cmli" ng-click="$ctrl.rename($event, $ctrl.id)" ng-if="$ctrl.id!= '1' && $ctrl.type=='folder' || $ctrl.type!='folder'">Rename</li>
+            <li class="cmli" ng-click="$ctrl.delete($event, $ctrl.id)" ng-if="$ctrl.id!= '1' && $ctrl.type=='folder' || $ctrl.type!='folder'">Delete</li>
+            <li class="cmli" ng-click="$ctrl.open($event, $ctrl.id)" ng-if="$ctrl.type!='folder'">Open</li>
+            <li class="tinyMessage">Open Console for info...</li>
         </ul>
     </div>
 </div>

@@ -12,14 +12,30 @@ var ContextMenuComponent = (function () {
             _this.posY = obj.event.clientY;
         });
     }
-    ContextMenuComponent.prototype.choose = function (event, id) {
-        console.log(event, id);
-    };
     ContextMenuComponent.prototype.hideMe = function (event) {
         if (event.target.classList.contains('context-bg')) {
-            console.log("Hide");
             this.id = null;
         }
+    };
+    ContextMenuComponent.prototype.createFolder = function (event, id) {
+        console.log('i am a create folder function');
+        console.log('item id is : ' + id);
+    };
+    ContextMenuComponent.prototype.createFile = function (event, id) {
+        console.log('i am a create file function');
+        console.log('item id is : ' + id);
+    };
+    ContextMenuComponent.prototype.rename = function (event, id) {
+        console.log('i am a rename item function');
+        console.log('item id is : ' + id);
+    };
+    ContextMenuComponent.prototype.delete = function (event, id) {
+        console.log('i am a delete item function');
+        console.log('item id is : ' + id);
+    };
+    ContextMenuComponent.prototype.open = function (event, id) {
+        console.log('i am an open file function');
+        console.log('item id is : ' + id);
     };
     return ContextMenuComponent;
 }());
